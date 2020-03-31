@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-03-31 09:53:56
-# Last Modified: 2020-03-31 10:05:52
+# Last Modified: 2020-03-31 11:31:40
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -25,7 +25,10 @@ void my_swap(int &a, int &b)
 
 int my_gcd(int a, int b)
 {
+
     my_swap(a, b);    
+    if(0 == a || 0 == b)
+        return a;
     while(a % b)
     {
         a = a / b;

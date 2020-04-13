@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-12 22:37:43
-# Last Modified: 2020-04-13 19:53:38
+# Last Modified: 2020-04-13 20:28:54
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -55,8 +55,9 @@ int main(int argc, char *argv[])
     std::cout << "\n";    
 
     
+    std::cout << "On this comput, the RAND_MAX is:" << RAND_MAX << ".\n";    
+    std::cout << "FIve numbers the rand function generates as follows:\n"; 
     std::cout << "\n";    
-   
 
 
 

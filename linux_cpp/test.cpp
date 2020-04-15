@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-12 22:37:43
-# Last Modified: 2020-04-13 20:28:54
+# Last Modified: 2020-04-15 20:21:26
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -59,6 +59,8 @@ int main(int argc, char *argv[])
     std::cout << "FIve numbers the rand function generates as follows:\n"; 
     std::cout << "\n";    
 
+    int num_of_elements = sizeof(arr) / sizeof(a[0]);
+    
 
 
 

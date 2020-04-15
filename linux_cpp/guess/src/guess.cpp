@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-13 21:10:32
-# Last Modified: 2020-04-13 21:46:38
+# Last Modified: 2020-04-15 19:59:32
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -17,6 +17,7 @@
 #include <iomanip>
 #include <ctime>
 #include <cstdlib>
+#include "guess.h"
 using std::cout;
 using std::cin;
 

@@ -1,0 +1,2 @@
+mubiao: yilai.cpp
+	g++ yilai.cpp -o mubiao

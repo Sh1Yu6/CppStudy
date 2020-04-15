@@ -1,0 +1,12 @@
+all: main.o func1.o
+	g++ main.o func1.o -o hello
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+func1.o: func1.cpp
+	g++ -c func1.cpp
+
+.PHONY:clean
+clean: 
+	rm -f *.o

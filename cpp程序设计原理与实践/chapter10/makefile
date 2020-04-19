@@ -14,11 +14,12 @@
 
 
 src = $(wildcard *.cpp)
-target= $(patsubst %.cpp, %, $(src))
+target= $(patsubst %.cpp, %.out, $(src))
 std_11= -std=c++11
+
 all:$(target)
 
-$(target):%:%.cpp
+$(target):%.out:%.cpp
 		g++ $< -o $@ $(std_11)
 
 clean:

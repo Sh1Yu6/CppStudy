@@ -1,12 +1,12 @@
 
 /************************************************
 #
-#      Filename: test10.cpp
+#      Filename: test11.cpp
 #
 #        Author: Sh1Yu6
 #   Description: ---
-#        Create: 2020-04-20 21:33:23
-# Last Modified: 2020-04-21 16:50:41
+#        Create: 2020-04-21 16:51:02
+# Last Modified: 2020-04-21 16:51:12
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -14,9 +14,8 @@
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
-#include <fstream>
 int main(int argc, char *argv[])
 {
-    std::ofstream ofs{"asdf", std::ios_base::in};
+    std::cout << "sdafjskldfj\nasdkfjskaldfj\n";
     return 0;
 }

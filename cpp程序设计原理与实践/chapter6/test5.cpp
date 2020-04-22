@@ -1,12 +1,12 @@
 
 /************************************************
 #
-#      Filename: test5.cpp
+#      Filename:		test5.cpp
 #
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-11 19:46:52
-# Last Modified: 2020-04-11 19:54:26
+# Last Modified: 2020-04-21 20:22:31
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -17,9 +17,9 @@
 
 class Variable
 {
-public:
-    std::string name;
-    double value;
+    public:
+        std::string name;
+        double value;
 };
 
 double get_value(std::string s);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         std::cin >> a.name >> a.value;
         var_table.push_back(a);
     }
-    
+
     std::cout << get_value("wang") << "\n";
     set_value("wang", 100);
     std::cout << get_value("wang") << "\n";

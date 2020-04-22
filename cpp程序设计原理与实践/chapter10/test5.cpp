@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-19 21:33:25
-# Last Modified: 2020-04-19 21:37:10
+# Last Modified: 2020-04-21 22:06:11
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
         if(1 <= n && n <= 10)
             break;
         std::cout << "Sorry " << n << " is not in the [1:10] range;"
-                                   << " Please try again\n";
+            << " Please try again\n";
+        std::cout << "asdfasdf\n";
     }
 
     /* 

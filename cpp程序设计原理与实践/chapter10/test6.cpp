@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-20 19:27:19
-# Last Modified: 2020-04-20 20:10:22
+# Last Modified: 2020-04-21 20:07:51
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -15,7 +15,6 @@
 #include <cmath>
 #include <stdexcept>
 #include <fstream>
-
 struct Reading
 {
     int day;
@@ -32,7 +31,7 @@ std::istream& operator>>(std::istream& is, Reading& r)
         is.clear(std::ios_base::failbit);
         return is;
     }
-    
+
     char ch2;
     int d;
     int h;
@@ -46,7 +45,7 @@ std::istream& operator>>(std::istream& is, Reading& r)
     r.hour = h;
     r.temperature = t;
     return is;
-        
+
 }
 
 

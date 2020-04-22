@@ -5,18 +5,19 @@
 #
 #        Author: Sh1Yu6
 #   Description: ---
-#        Create: 2020-04-20 21:33:23
-# Last Modified: 2020-04-21 16:50:41
+#        Create: 2020-04-22 09:07:15
+# Last Modified: 2020-04-22 09:08:02
 #***********************************************/
+#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
-#include <fstream>
 int main(int argc, char *argv[])
 {
-    std::ofstream ofs{"asdf", std::ios_base::in};
+    initstate_r
     return 0;
 }
+

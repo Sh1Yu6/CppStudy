@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-22 21:27:27
-# Last Modified: 2020-04-22 21:39:25
+# Last Modified: 2020-04-23 20:24:12
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -19,7 +19,16 @@ class vector
 {
 public:
 
-    vector(int s);
+    vector(int s): sz{s}, elem{new double[s]}
+    {
+        for(int i = 0; i < s; ++i)
+            elem[i] = 0;
+    }
+
+    ~vector()
+    {
+        delete [] elem;
+    }
 
     int size() const
     {
@@ -64,15 +73,13 @@ private:
 int main(int argc, char *argv[])
 {
 
-    int x = 17;
-    int* pi = &x;
-
-    double e = 2.71828;
-    double* pd = &e;
-
-    std::cout << pi << "  " << *pi << std::endl;
-    std::cout << pd << "  " << *pd << std::endl;
-
+    std::cout << "the size of bool is " << sizeof(bool) << "\n";
+    std::cout << "the size of int is " << sizeof(int) << "\n";
+    std::cout << "the size of int* is " << sizeof(int*) << "\n";
+    std::cout << "the size of double is " << sizeof(double) << "\n";
+    std::cout << "the size of long is " << sizeof(long) << "\n";
+    std::cout << "the size of float is " << sizeof(float) << "\n";
+    
 
 
 

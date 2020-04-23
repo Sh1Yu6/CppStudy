@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-23 20:17:08
-# Last Modified: 2020-04-23 20:20:43
+# Last Modified: 2020-04-23 20:42:17
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -47,8 +47,5 @@ int main(int argc, char *argv[])
 {
 
 
-    A b;
-    std::cout <<
-    B a;
     return 0;
 }

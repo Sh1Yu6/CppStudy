@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-04-22 21:27:27
-# Last Modified: 2020-04-23 20:24:12
+# Last Modified: 2020-04-23 20:46:24
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -30,6 +30,16 @@ public:
         delete [] elem;
     }
 
+    double get(int n) const
+    {
+        return elem[n];
+    }
+
+    void set(int n, double v)
+    {
+        elem[n] = v;
+    }
+
     int size() const
     {
         return sz;
@@ -42,57 +52,20 @@ private:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#ifndef NDEBUG
 
 int main(int argc, char *argv[])
 {
 
-    std::cout << "the size of bool is " << sizeof(bool) << "\n";
-    std::cout << "the size of int is " << sizeof(int) << "\n";
-    std::cout << "the size of int* is " << sizeof(int*) << "\n";
-    std::cout << "the size of double is " << sizeof(double) << "\n";
-    std::cout << "the size of long is " << sizeof(long) << "\n";
-    std::cout << "the size of float is " << sizeof(float) << "\n";
-    
-
-
-
-
-
-
-
-
-
-
-
+    vector v(5);
+    for(int i = 0; i < v.size(); ++i)
+    {
+        v.set(i, 1.1*i);
+        std::cout << v.get(i) << "\n";
+    }
 
 
 
     return 0;
 }
+#endif

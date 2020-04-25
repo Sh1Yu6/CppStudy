@@ -19,7 +19,7 @@ target= $(patsubst %.cpp, %.out, $(src))
 all:$(target)
 
 $(target):%.out:%.cpp
-	g++ $< -o $@
+	g++ $< -o $@ -std=c++11
 
 clean:
 		rm -rf $(target)

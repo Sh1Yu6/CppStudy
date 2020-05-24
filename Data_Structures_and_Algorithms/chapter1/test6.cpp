@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-05-07 22:02:31
-# Last Modified: 2020-05-07 22:46:12
+# Last Modified: 2020-05-08 19:13:59
 #***********************************************/
 #include <iostream>
 #include <string>
@@ -15,41 +15,8 @@
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
+#include "test6.h"
 
-enum SignType {kPlus, kMinus};
-class Currency
-{
-    public:
-        Currency(SignType the_sign = kPlus, unsigned int the_dollars = 0,
-                 unsigned int the_center = 0)
-                 : sign_{the_sign}, dollars_{the_dollars}, cents_{the_center}{}
-        ~Currency(){}
-        void SetValue(SignType, unsigned int, unsigned int);
-        void SetValue(double);
-        SignType GetSign() const
-        {
-            return sign_;
-        }
-
-        unsigned int GetDollars() const 
-        {
-            return dollars_;
-        }
-        
-        unsigned int GetCents() const
-        {
-            return cents_;
-        }
-
-        Currency Add(const Currency&) const;
-        Currency& Increment(const Currency&);
-        void OutPut() const;
-
-    private:
-        SignType sign_;
-        unsigned int dollars_;
-        unsigned int cents_;
-};
 
 void Currency::SetValue(SignType the_sign, unsigned int the_dollars,
                         unsigned int the_cents)
@@ -113,20 +80,33 @@ Currency Currency::Add(const Currency& x) const
     return result;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-int main(int argc, char *argv[])
+Currency& Currency::Increment(const Currency& x)
 {
-
-    return 0;
+    *this = Add(x);
+    return *this;
 }
+
+void Currency::OutPut() const
+{
+    if(sign_ == kMinus)
+    {
+        std::cout << "-";
+    }
+    std::cout << "$" << dollars_ << ".";
+    if(cents_ < 10)
+    {
+        std::cout << "0";
+    }
+    std::cout << cents_;
+}
+
+
+
+
+
+
+
+
+
+
+

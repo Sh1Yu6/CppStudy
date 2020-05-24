@@ -6,8 +6,9 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-05-23 19:01:04
-# Last Modified: 2020-05-23 21:32:00
+# Last Modified: 2020-05-24 20:34:05
 #***********************************************/
+#include <cstddef>
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -16,6 +17,71 @@
 #include <cmath>
 #include <stdexcept>
 #include <sstream>
+
+template<typename T>
+class Iterator
+{
+    public:
+        using iterator_category = std::bidirectional_iterator_tag;
+        using value_type = T;
+        using difference_type = std::ptrdiff_t;
+        using pointer = T*;
+        using reference = T&;
+
+        Iterator(T* the_position = 0): position{the_position}{}
+        
+        T& operator*() const
+        {
+            return *position;
+        }
+
+        T* operator->() const
+        {
+            return &* position;
+        }
+
+        Iterator& operator++()
+        {
+            ++position;
+            return *this;
+        }
+
+        Iterator operator++(int)
+        {
+            Iterator old = *this;
+            ++position;
+            return old;
+        }
+
+        Iterator& operator--()
+        {
+            --position;
+            return *this;
+        }
+
+        Iterator operator--(int)
+        {
+            Iterator old = *this;
+            --position;
+            return old;
+        }
+
+        bool operator!=(const Iterator right) const
+        {
+            return position != right.position;
+        }
+
+        bool operator==(const Iterator right) const
+        {
+            return position == right.position;
+        }
+
+        
+    private:
+        T* position;
+
+
+};
 
 template<typename T>
 class LinearList
@@ -55,6 +121,17 @@ void ChangeLength(T*& arr, int old_length, int new_length)
     
 }
 
+template<typename T>
+void ChangeLength2D(T**& arr, int old_row, int old_col, int new_row, int new_col)
+{
+    if(new_row < 0 || new_col < 0)
+    {
+        std::cerr << "some things are worry, exit\n";
+        return 0;
+    }
+
+    T* temp = new T*[new_row];
+}
 
 template<typename T>
 class ArrayList: public LinearList<T>
@@ -199,15 +276,20 @@ std::ostream& operator<<(std::ostream& out, const ArrayList<T>& x)
     return out;
 }
 
+template<typename T>
+void copy(T start, T end, T to)
+{
+    while(start != end)
+    {
+        *to = *start;
+        ++start;
+        ++to;
+    }
+}
+
+
 int main(int argc, char *argv[])
 {
-    ArrayList<int> arr(100);
-
-    for(int i = 0; i < 100; ++i)
-    {
-        arr.Insert(0, i);
-    }
-    std::cout << arr << std::endl;
 
     return 0;
 }

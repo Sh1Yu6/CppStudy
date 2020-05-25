@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-05-24 21:01:55
-# Last Modified: 2020-05-24 22:08:12
+# Last Modified: 2020-05-25 19:30:39
 #***********************************************/
 #include <ios>
 #include <iostream>
@@ -15,7 +15,7 @@
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
-
+#include <memory>
 
 struct Employee
 {

@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-06-03 19:21:59
-# Last Modified: 2020-06-03 21:38:57
+# Last Modified: 2020-06-04 19:04:15
 #***********************************************/
 #include <cstdlib>
 #include <iostream>
@@ -19,7 +19,7 @@ using namespace std;
 
 
 //size_t Spreadsheet::sCounter = 0;
-Spreadsheet::Spreadsheet(size_t width, size_t height, SpreadsheetApplication& theApp): 
+Spreadsheet::Spreadsheet(size_t width, size_t height, const SpreadsheetApplication& theApp): 
     mWidth(min(width, kMinWidth)), mHeight(min(height, kMaxHeight)), mId(sCounter++), mTheApp(theApp)
 {
     mCells = new SpreadsheetCell*[mWidth];
@@ -81,7 +81,6 @@ void swap(Spreadsheet& first, Spreadsheet& second) noexcept
 {
     swap(first.mWidth, second.mWidth);
     swap(first.mHeight, second.mHeight);
-    swap(first.mTheApp, second.mTheApp);
     swap(first.mCells, second.mCells);
 }
 Spreadsheet::~Spreadsheet()

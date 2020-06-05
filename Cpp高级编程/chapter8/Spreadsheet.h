@@ -14,7 +14,7 @@ class Spreadsheet
         static const size_t kMinWidth = 100;
 
 
-        Spreadsheet(size_t width, size_t height, SpreadsheetApplication& theApp);
+        Spreadsheet(size_t width, size_t height, const SpreadsheetApplication& theApp);
         Spreadsheet(const Spreadsheet& src);
         Spreadsheet(Spreadsheet&& src) noexcept;
         ~Spreadsheet();
@@ -40,5 +40,5 @@ class Spreadsheet
         size_t mHeight = 0;
         SpreadsheetCell** mCells = nullptr;
         size_t mId = 0;
-        SpreadsheetApplication& mTheApp;
+        const SpreadsheetApplication& mTheApp;
 };

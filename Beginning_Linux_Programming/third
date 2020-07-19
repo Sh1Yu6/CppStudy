@@ -1,0 +1,10 @@
+#!/bin/bash
+
+IFS=';;'
+set foo bar bam
+echo "$@"
+echo "$*"
+unset IFS
+echo "$*"
+echo "$#"
+exit 0

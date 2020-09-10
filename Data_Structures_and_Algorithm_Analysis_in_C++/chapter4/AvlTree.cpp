@@ -6,7 +6,7 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-08-09 09:16:08
-# Last Modified: 2020-08-09 09:33:57
+# Last Modified: 2020-08-11 07:22:25
 #***********************************************/
 #include <iostream>
 using namespace std;
@@ -130,5 +130,4 @@ class AvlTree
             }
             balance(t);
         }
-
 };

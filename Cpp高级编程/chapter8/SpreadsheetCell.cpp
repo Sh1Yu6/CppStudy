@@ -6,14 +6,13 @@
 #        Author: Sh1Yu6
 #   Description: ---
 #        Create: 2020-06-01 19:48:29
-# Last Modified: 2020-06-01 21:44:22
+# Last Modified: 2020-06-03 21:03:00
 #***********************************************/
 #include <iostream>
 #include <algorithm>
 #include <cmath>
 #include "SpreadsheetCell.h"
 using namespace std;
-
 
 SpreadsheetCell::SpreadsheetCell(double initialValue)
 {
@@ -49,11 +48,13 @@ SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs)
 
 void SpreadsheetCell::setValue(double inValue)
 {
+    ++mNumAccesses;
     mValue = inValue;
 }
 
 double SpreadsheetCell::getValue() const
 {
+    ++mNumAccesses;
     return mValue;
 }
 

@@ -1,24 +1,19 @@
 
 /************************************************
 #
-#      Filename: test13.cpp
+#      Filename: Ostream.cpp
 #
 #        Author: Sh1Yu6
 #   Description: ---
-#        Create: 2020-05-08 20:33:08
-# Last Modified: 2020-05-08 20:38:03
+#        Create: 2020-09-12 20:19:27
+# Last Modified: 2020-09-12 20:56:39
 #***********************************************/
 #include <iostream>
-#include <string>
-#include <vector>
 #include <algorithm>
-#include <cmath>
-#include <stdexcept>
 
-
-
+using namespace std;
 int main(int argc, char *argv[])
 {
-
     return 0;
 }
+
